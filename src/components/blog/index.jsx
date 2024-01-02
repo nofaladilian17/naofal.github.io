@@ -174,46 +174,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
     );
   };
 
-  return (
-    <Fragment>
-      {displaySection(blog) && (
-        <div className="col-span-1 lg:col-span-2">
-          <div className="grid grid-cols-2 gap-6">
-            <div className="col-span-2">
-              <div
-                className={`card compact bg-base-100 ${
-                  loading || (articles && articles.length)
-                    ? 'shadow bg-opacity-40'
-                    : 'shadow-lg'
-                }`}
-              >
-                <div className="card-body">
-                  <div className="mx-3 mb-2">
-                    <h5 className="card-title">
-                      {loading ? (
-                        skeleton({ width: 'w-28', height: 'h-8' })
-                      ) : (
-                        <span className="text-base-content opacity-70">
-                          Recent Posts
-                        </span>
-                      )}
-                    </h5>
-                  </div>
-                  <div className="col-span-2">
-                    <div className="grid grid-cols-1 gap-6">
-                      {loading || !articles
-                        ? renderSkeleton()
-                        : renderArticles()}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </Fragment>
-  );
+  
 };
 
 Blog.propTypes = {

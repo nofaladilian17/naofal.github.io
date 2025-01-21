@@ -1,3 +1,4 @@
+// Komponen AvatarCard
 import PropTypes from 'prop-types';
 import { fallbackImage, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
@@ -25,17 +26,15 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
                   : ''
               }`}
             >
-              {
-                <LazyImage
-                  src={profile.avatar ? profile.avatar : fallbackImage}
-                  alt={profile.name}
-                  placeholder={skeleton({
-                    width: 'w-full',
-                    height: 'h-full',
-                    shape: '',
-                  })}
-                />
-              }
+              <LazyImage
+                src={profile.avatar ? profile.avatar : fallbackImage}
+                alt={profile.name}
+                placeholder={skeleton({
+                  width: 'w-full',
+                  height: 'h-full',
+                  shape: '',
+                })}
+              />
             </div>
           </div>
         )}
@@ -86,3 +85,30 @@ AvatarCard.propTypes = {
 };
 
 export default AvatarCard;
+
+// Komponen Induk
+import React, { useState } from 'react';
+import AvatarCard from './AvatarCard';
+
+const ParentComponent = () => {
+  const [resume] = useState({
+    fileUrl: "https://raw.githubusercontent.com/nofaladilian17/naofal.github.io/refs/heads/main/CV%20Naofal%20Adiliantama%2C_2.pdf",
+  });
+
+  return (
+    <div>
+      <AvatarCard
+        profile={{
+          name: 'Naofal Adiliantama',
+          avatar: 'https://example.com/avatar.jpg',
+          bio: 'Web Developer',
+        }}
+        loading={false}
+        avatarRing={true}
+        resume={resume} // Menambahkan URL file resume ke komponen AvatarCard
+      />
+    </div>
+  );
+};
+
+export default ParentComponent;

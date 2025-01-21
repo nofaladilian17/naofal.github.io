@@ -20,7 +20,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://raw.githubusercontent.com/nofaladilian17/naofal.github.io/refs/heads/main/CV%20Naofal%20Adiliantama%2C_2.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',

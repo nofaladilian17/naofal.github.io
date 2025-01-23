@@ -11,7 +11,7 @@ const config = {
     },
   },
   social: {
-    linkedin: 'Opon Gaming',
+    linkedin: 'Naofal Adiliantama',
     facebook: 'NofalAdilianIF',
     instagram: 'Nofal_Adilian17',
     youtube: '', // example: 'pewdiepie'
@@ -20,7 +20,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://github.com/nofaladilian17/naofal.github.io/blob/016e155c8c909540bb0d973fc06a1ec5fde6aa85/CV%20Naofal%20Adiliantama%2C_2.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://raw.githubusercontent.com/nofaladilian17/naofal.github.io/016e155c8c909540bb0d973fc06a1ec5fde6aa85/CV%20Naofal%20Adiliantama%2C_2.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',
